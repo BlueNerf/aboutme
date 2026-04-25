@@ -81,10 +81,6 @@ body {
   background-color: #dfdfdf;
 }
 
-.discord:hover::before {
-    opacity: 0;
-}
-
 .blue
 {
     color: var(--main-color);
