@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'AktivGrotesk';
+    font-style: normal;
+    font-weight: normal;
+    src: local('AktivGrotesk'),
+         url('/static/AktivGrotesk.otf') format('opentype');
+}
+
+:root {
+    --main-color: #4252ff;
+    --bg: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(209, 209, 209, 1) 100%);
+    --spacing: 16px;
+}
+
+/* [data-mode="dark"] {
+    --bg: radial-gradient(circle,rgba(8, 8, 8, 1) 0%, rgba(0, 0, 0, 1) 100%);
+} */
+
+body {
+    margin: 0;
+
+    background: var(--bg);
+}
+
+.name
+{
+    padding-left: 2vw;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-size: xx-large;
+    font-family: 'AktivGrotesk', system-ui, -apple-system, sans-serif;
+    color: black;
+
+    transition: color 0.25s ease;
+}
+
+.name:hover
+{
+    color: #4252ff;
+}
+
+.hero
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-family: 'AktivGrotesk', system-ui, -apple-system, sans-serif;
+    color: black;
+
+    transition: color 0.25s ease;
+}
+
+.discord
+{
+    position: absolute;
+    right: 0;
+    
+    margin: 2rem;
+
+    width: 50px;
+    height: 50px;
+    background: url("https://cdn.discordapp.com/avatars/968625758950015038/3d68a5dea717d4bb99441939af440426.png?size=1024") center no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    
+    border: 2px solid #4252ff;
+
+    transition: background-image 0.2s ease;
+}
+
+.discord:hover {
+  background-image: url("/static/discord.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-color: #dfdfdf;
+}
+
+.discord:hover::before {
+    opacity: 0;
+}
+
+.blue
+{
+    color: var(--main-color);
+}
